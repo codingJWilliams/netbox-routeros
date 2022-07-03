@@ -1,7 +1,7 @@
 from django import forms
 
 from dcim.models import Device
-from extras.models import Tag
+from extras.models.tags import Tag
 from netbox_routeros.models import ConfigurationTemplate, ConfiguredDevice
 from tenancy.forms import TenancyForm
 from utilities.forms import (
