@@ -1,7 +1,7 @@
 from django.urls import path
 from django.views import View
 
-from extras.views import ObjectChangeLogView
+from netbox.views.generic import ObjectChangeLogView
 from . import views
 from .models import ConfigurationTemplate, ConfiguredDevice
 
