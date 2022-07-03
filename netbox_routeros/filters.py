@@ -1,5 +1,5 @@
 from netbox_routeros.models import ConfigurationTemplate, ConfiguredDevice
-from tenancy.filters import TenancyFilterSet
+from netbox.tenancy.filters import TenancyFilterSet
 from utilities.filters import BaseFilterSet, NameSlugSearchFilterSet
 
 
