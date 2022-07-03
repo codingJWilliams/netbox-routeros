@@ -12,7 +12,7 @@ from typing import Union, List, Optional
 
 import django.apps
 from django.contrib.postgres.fields import ArrayField
-from django.db.models import Func
+from django.db.models import Q, Func
 from django.db.models.functions import Cast
 from django.utils.module_loading import import_string
 from jinja2 import Environment, BaseLoader, TemplateNotFound
@@ -20,7 +20,7 @@ import netaddr
 
 from dcim.models import Device, Interface
 from ipam.fields import IPAddressField
-from ipam.models import IPAddress, VLAN, Q, Prefix
+from ipam.models import IPAddress, VLAN, Prefix
 from utilities.utils import deepmerge
 
 
