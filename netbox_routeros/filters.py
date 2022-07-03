@@ -1,6 +1,7 @@
 from netbox_routeros.models import ConfigurationTemplate, ConfiguredDevice
 from tenancy.filtersets import TenancyFilterSet
-from utilities.filters import BaseFilterSet, NameSlugSearchFilterSet
+from netbox.filtersets import BaseFilterSet, NetBoxModelFilterSet
+from utilities.filters import NameSlugSearchFilterSet
 
 
 class ConfiguredDeviceFilterSet(
@@ -18,7 +19,7 @@ class ConfiguredDeviceFilterSet(
 
 
 class ConfigurationTemplateFilterSet(
-    BaseFilterSet, TenancyFilterSet, NameSlugSearchFilterSet
+    BaseFilterSet, TenancyFilterSet, NetBoxModelFilterSet
 ):
     class Meta:
         model = ConfigurationTemplate
