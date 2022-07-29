@@ -8,7 +8,8 @@ from napalm.base import ModuleImportError
 from routeros_diff import RouterOSConfig
 from taggit.managers import TaggableManager
 
-from extras.models import ChangeLoggedModel, TaggedItem
+from netbox.models import ChangeLoggedModel
+from extras.models.tags import TaggedItem
 from netbox.api.exceptions import ServiceUnavailable
 from netbox_routeros.ros_config_maker import render_ros_config
 from netbox_routeros.utilities.napalm import get_napalm_driver

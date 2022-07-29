@@ -1,7 +1,7 @@
 from django import forms
 
 from dcim.models import Device
-from extras.models import Tag
+from extras.models.tags import Tag
 from netbox_routeros.models import ConfigurationTemplate, ConfiguredDevice
 from tenancy.forms import TenancyForm
 from utilities.forms import (
@@ -42,7 +42,7 @@ class ConfigurationTemplateForm(BootstrapMixin, TenancyForm, forms.ModelForm):
         label="",
     )
     preview_for_device = DynamicModelChoiceField(
-        queryset=Device.objects.all(), display_field="display_name", required=False,
+        queryset=Device.objects.all(), required=False,
     )
 
     class Meta:
