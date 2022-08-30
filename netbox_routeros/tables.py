@@ -8,8 +8,8 @@ from netbox_routeros.template_code import (
     CONFIGURED_DEVICE_BUTTONS,
 )
 from netbox_routeros.utilities.tables import TagColumn
-from tenancy.tables import COL_TENANT
-from utilities.tables import (
+from tenancy.tables import TenantColumn
+from netbox.tables import (
     BaseTable,
     ToggleColumn,
 )
@@ -60,7 +60,7 @@ class ConfiguredDeviceTable(BaseTable):
 class ConfigurationTemplateTable(BaseTable):
     pk = ToggleColumn()
     name = TemplateColumn(order_by=("_name",), template_code=TEMPLATE_LINK)
-    tenant = TemplateColumn(template_code=COL_TENANT)
+    tenant = TemplateColumn(template_code=TenantColumn)
 
     actions = TemplateColumn(template_code=TEMPLATE_BUTTONS,)
 

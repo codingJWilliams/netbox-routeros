@@ -42,7 +42,7 @@ class ConfigurationTemplateForm(BootstrapMixin, TenancyForm, forms.ModelForm):
         label="",
     )
     preview_for_device = DynamicModelChoiceField(
-        queryset=Device.objects.all(), display_field="display_name", required=False,
+        queryset=Device.objects.all(), required=False,
     )
 
     class Meta:
