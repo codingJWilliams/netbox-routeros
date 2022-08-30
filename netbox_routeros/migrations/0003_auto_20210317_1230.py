@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterModelOptions(
-            name="configurationtemplate", options={"ordering": ["name"]},
+            name="configurationtemplate",
+            options={"ordering": ["name"]},
         ),
         migrations.CreateModel(
             name="ConfiguredDevice",
@@ -64,6 +65,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={"ordering": ["device__name"],},
+            options={
+                "ordering": ["device__name"],
+            },
         ),
     ]

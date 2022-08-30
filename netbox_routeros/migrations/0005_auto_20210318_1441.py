@@ -11,7 +11,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveField(
-            model_name="configureddevice", name="last_config_pushed",
+            model_name="configureddevice",
+            name="last_config_pushed",
         ),
         migrations.AddField(
             model_name="configureddevice",

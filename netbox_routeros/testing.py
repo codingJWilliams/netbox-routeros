@@ -146,7 +146,8 @@ class DataProvider:
                 ip.save()
             else:
                 IPAddress.objects.create(
-                    address=ip, assigned_object=interface,
+                    address=ip,
+                    assigned_object=interface,
                 )
 
         if vlan:
@@ -156,7 +157,9 @@ class DataProvider:
 
     def prefix(self, prefix: str = None, **kwargs):
         number = Prefix.objects.count()
-        values = dict(prefix=prefix or f"10.123.{number}.0/24",)
+        values = dict(
+            prefix=prefix or f"10.123.{number}.0/24",
+        )
         return Prefix.objects.create(**values)
 
     def vlan(self, vid: int = None, name: str = None):

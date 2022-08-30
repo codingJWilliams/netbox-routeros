@@ -30,7 +30,9 @@ class ConfiguredDeviceTable(BaseTable):
     )
     tags = TagColumn(accessor="device.tags", url_name="dcim:device_list")
 
-    actions = TemplateColumn(template_code=CONFIGURED_DEVICE_BUTTONS,)
+    actions = TemplateColumn(
+        template_code=CONFIGURED_DEVICE_BUTTONS,
+    )
 
     class Meta(BaseTable.Meta):
         model = ConfiguredDevice
@@ -62,7 +64,9 @@ class ConfigurationTemplateTable(BaseTable):
     name = TemplateColumn(order_by=("_name",), template_code=TEMPLATE_LINK)
     tenant = TemplateColumn(template_code=TenantColumn)
 
-    actions = TemplateColumn(template_code=TEMPLATE_BUTTONS,)
+    actions = TemplateColumn(
+        template_code=TEMPLATE_BUTTONS,
+    )
 
     class Meta(BaseTable.Meta):
         model = ConfigurationTemplate
