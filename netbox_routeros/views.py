@@ -146,7 +146,7 @@ class ConfigurationTemplateEditView(generic.ObjectEditView):
 
     def render_preview(self, request, *args, **kwargs):
         obj = self.alter_obj(self.get_object(kwargs), request, args, kwargs)
-        form = self.model_form(data=request.POST, files=request.FILES, instance=obj)
+        form = self.form(data=request.POST, files=request.FILES, instance=obj)
 
         if not form.is_valid():
             return super().post(request, *args, **kwargs)
