@@ -4,8 +4,8 @@ from dcim.models import Device
 from extras.models.tags import Tag
 from netbox_routeros.models import ConfigurationTemplate, ConfiguredDevice
 from tenancy.forms import TenancyForm
-from utilities.forms import (
-    BootstrapMixin,
+from utilities.forms import BootstrapMixin
+from utilities.forms.fields import (
     DynamicModelMultipleChoiceField,
     SlugField,
     DynamicModelChoiceField,
