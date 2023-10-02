@@ -2,12 +2,12 @@ from netbox_routeros.models import ConfigurationTemplate, ConfiguredDevice
 from tenancy.filtersets import TenancyFilterSet
 from netbox.filtersets import (
     BaseFilterSet,
-    PrimaryModelFilterSet
+    NetBoxModelFilterSet
 )
 
 
 class ConfiguredDeviceFilterSet(
-    BaseFilterSet, PrimaryModelFilterSet
+    BaseFilterSet, NetBoxModelFilterSet
 ):
     class Meta:
         # TODO: Include device fields
@@ -21,7 +21,7 @@ class ConfiguredDeviceFilterSet(
 
 
 class ConfigurationTemplateFilterSet(
-    BaseFilterSet, PrimaryModelFilterSet
+    BaseFilterSet, NetBoxModelFilterSet
 ):
     class Meta:
         model = ConfigurationTemplate
