@@ -134,7 +134,7 @@ class ConfigurationTemplateListView(generic.ObjectListView):
 
 class ConfigurationTemplateEditView(generic.ObjectEditView):
     queryset = ConfigurationTemplate.objects.all()
-    model_form = forms.ConfigurationTemplateForm
+    form = forms.ConfigurationTemplateForm
     template_name = "routeros/configuration_template_edit.html"
     default_return_url = "plugins:netbox_routeros:configurationtemplate_list"
 
