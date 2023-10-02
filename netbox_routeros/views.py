@@ -38,7 +38,7 @@ class ConfiguredDeviceListView(generic.ObjectListView):
 class ConfiguredDeviceEditView(generic.ObjectEditView):
     # TODO: Don't allow editing of device field
     queryset = ConfiguredDevice.objects.all()
-    model_form = forms.ConfiguredDeviceForm
+    form = forms.ConfiguredDeviceForm
     template_name = "routeros/configured_device_edit.html"
     default_return_url = "plugins:netbox_routeros:configureddevice_list"
 
